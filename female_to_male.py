@@ -6,7 +6,6 @@ import pandas as pd
 # read in data
 df = pd.read_csv('StudentsPerformance.csv', index_col=0)
 
-
 # set width of bar
 barWidth = 0.25
 
