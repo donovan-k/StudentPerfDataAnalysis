@@ -1,10 +1,11 @@
+# File compares male and female scores by the amount that are greater than 80
 # libraries
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
 
-class Gender:
+class Gender:  # class is used to create objects for groups and methods for scoring better than 80
 
     def __init__(self, gr_name, gr_good):
         self.gr_name = gr_name

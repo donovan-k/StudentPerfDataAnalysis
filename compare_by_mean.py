@@ -1,10 +1,12 @@
+# File compares male and female scores by mean and plots them on a bar graph
+# libraries
 import statistical_measurements as sm
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
 
-class GenderMean:
+class GenderMean:  # class is used to create objects for groups and differentiate their subjects
 
     def __init__(self, math_sb, read_sb, writ_sb):
         self.math_sb = math_sb

@@ -1,6 +1,7 @@
+# File that contains Subject class which finds statistics
+# File also shows mean, variance, and standard deviation of all scores
 # libraries
 import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
 import math
 

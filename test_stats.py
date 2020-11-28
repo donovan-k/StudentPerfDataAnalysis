@@ -1,3 +1,5 @@
+# Testing file for statistical_measurement Subject algorithms
+# libraries
 import statistical_measurements
 import pandas as pd
 import unittest
