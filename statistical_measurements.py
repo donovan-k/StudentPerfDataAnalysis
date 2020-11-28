@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import math
 
+
 class Subject:
 
     def __init__(self, sb_name):
