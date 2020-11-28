@@ -1,2 +1,6 @@
 # This is a python program that is used to analize a student performance dataset on groups based
-# on gender, race, level of education, and so on 
+# on gender, race, level of education, and so on. 
+# Main files are:
+# compare_by_greater.py, compare_by_mean.py, and statistical_measurements.py
+#
+# P.S (I used PyCharm for this project)
