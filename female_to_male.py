@@ -3,6 +3,23 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
+
+class Gender:
+
+    def __init__(self, gr_name, gr_good):
+        self.gr_name = gr_name
+        self.gr_good = gr_good
+
+    def math_well(self):
+        return self.gr_name.where(self.gr_name['math score'] > self.gr_good)
+
+    def read_well(self):
+        return self.gr_name.where(self.gr_name['reading score'] > self.gr_good)
+
+    def writ_well(self):
+        return self.gr_name.where(self.gr_name['writing score'] > self.gr_good)
+
+
 # read in data
 df = pd.read_csv('StudentsPerformance.csv', index_col=0)
 
@@ -10,23 +27,23 @@ df = pd.read_csv('StudentsPerformance.csv', index_col=0)
 barWidth = 0.25
 
 # set height of bar
-group_male = df.drop('female')
-group_female = df.drop('male')
+group_male = Gender(df.drop('female'), 80)
+group_female = Gender(df.drop('male'), 80)
 
-male_well_math = group_male.where(group_male['math score'] > 80)
-fem_well_math = group_female.where(group_female['math score'] > 80)
+male_well_math = group_male.math_well()
+fem_well_math = group_female.math_well()
 
-male_well_read = group_male.where(group_male['reading score'] > 80)
-fem_well_read = group_female.where(group_female['reading score'] > 80)
+male_well_read = group_male.read_well()
+fem_well_read = group_female.read_well()
 
-male_well_writ = group_male.where(group_male['writing score'] > 80)
-fem_well_writ = group_female.where(group_female['writing score'] > 80)
+male_well_writ = group_male.writ_well()
+fem_well_writ = group_female.writ_well()
 
 
 def well_counter(group, score):
     group_count = 0
     for j in group[score]:
-        if j > 80:
+        if j > group_male.gr_good:
             group_count = group_count + 1
     return group_count
 
