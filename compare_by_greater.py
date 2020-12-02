@@ -3,23 +3,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-
-
-class Gender:  # class is used to create objects for groups and methods for scoring better than 80
-
-    def __init__(self, gr_name, gr_good):
-        self.gr_name = gr_name
-        self.gr_good = gr_good
-
-    def math_well(self):
-        return self.gr_name.where(self.gr_name['math score'] > self.gr_good)
-
-    def read_well(self):
-        return self.gr_name.where(self.gr_name['reading score'] > self.gr_good)
-
-    def writ_well(self):
-        return self.gr_name.where(self.gr_name['writing score'] > self.gr_good)
-
+import ScoreGreater as sG
 
 # read in data
 df = pd.read_csv('StudentsPerformance.csv', index_col=0)
@@ -28,8 +12,8 @@ df = pd.read_csv('StudentsPerformance.csv', index_col=0)
 barWidth = 0.25
 
 # set height of bar
-group_male = Gender(df.drop('female'), 80)
-group_female = Gender(df.drop('male'), 80)
+group_male = sG.ScoreGreater(df.drop('female'), 80)
+group_female = sG.ScoreGreater(df.drop('male'), 80)
 
 male_well_math = group_male.math_well()
 fem_well_math = group_female.math_well()

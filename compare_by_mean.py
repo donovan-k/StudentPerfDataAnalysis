@@ -1,34 +1,27 @@
 # File compares male and female scores by mean and plots them on a bar graph
 # libraries
-import statistical_measurements as sm
+import StatCalculation as sC
+import DiffSub as dS
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
-
-class GenderMean:  # class is used to create objects for groups and differentiate their subjects
-
-    def __init__(self, math_sb, read_sb, writ_sb):
-        self.math_sb = math_sb
-        self.read_sb = read_sb
-        self.writ_sb = writ_sb
 
 
 com_df = pd.read_csv('StudentsPerformance.csv', index_col=0)
 male = com_df.drop('female')
 fem = com_df.drop('male')
 
-male_data = GenderMean(male['math score'], male['reading score'], male['writing score'])
-fem_data = GenderMean(fem['math score'], fem['reading score'], fem['writing score'])
+male_data = dS.DiffSub(male['math score'], male['reading score'], male['writing score'])
+fem_data = dS.DiffSub(fem['math score'], fem['reading score'], fem['writing score'])
 
-male_math_stats = sm.Subject(male_data.math_sb)
-fem_math_stats = sm.Subject(fem_data.math_sb)
+male_math_stats = sC.StatCalc(male_data.math_sb)
+fem_math_stats = sC.StatCalc(fem_data.math_sb)
 
-male_read_stats = sm.Subject(male_data.read_sb)
-fem_read_stats = sm.Subject(fem_data.read_sb)
+male_read_stats = sC.StatCalc(male_data.read_sb)
+fem_read_stats = sC.StatCalc(fem_data.read_sb)
 
-male_writ_stats = sm.Subject(male_data.writ_sb)
-fem_writ_stats = sm.Subject(fem_data.writ_sb)
+male_writ_stats = sC.StatCalc(male_data.writ_sb)
+fem_writ_stats = sC.StatCalc(fem_data.writ_sb)
 
 bars1 = [male_math_stats.mean_of(), fem_math_stats.mean_of()]   # Average math score
 bars2 = [male_read_stats.mean_of(), fem_read_stats.mean_of()]  # Average reading score
