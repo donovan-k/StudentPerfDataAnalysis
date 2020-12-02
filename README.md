@@ -20,4 +20,5 @@ COMPARING THE COUNT OF SCORES GREATER THAN 80
 
 
 COMPARING SUBJECT CALCULATIONS
+
 ![compare_subjects](https://user-images.githubusercontent.com/48697778/100936846-bc6f4380-34b7-11eb-96bc-3e6558821d75.png)
