@@ -3,6 +3,6 @@
 # Main files are:
 compare_by_greater.py, compare_by_mean.py, and statistical_measurements.py
 
-# So far I have only compared male and female math, reading, and writing scores
+# So far I have compared male and female scores along with overall scores for math, reading, and writing.
 
 # P.S (I used PyCharm for this project)
