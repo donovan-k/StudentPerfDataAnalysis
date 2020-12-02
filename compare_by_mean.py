@@ -46,4 +46,4 @@ plt.xticks([r + barWidth for r in range(len(bars1))], ['male', 'female'])
 
 # Create legend & Show graphic
 plt.legend()
-plt.show()
+plt.savefig('m_to_f_compare_mean.png')
