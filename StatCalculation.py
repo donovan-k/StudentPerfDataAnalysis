@@ -1,23 +1,14 @@
 # File for holding statistic calculations
+import numpy as np
 
 
 class StatCalc:
 
     def __init__(self, sb_name):
-        self.sb_name = sb_name
-
-    def sum_of(self):
-        return sum(self.sb_name)
-
-    def mean_of(self):
-        return sum(self.sb_name) / len(self.sb_name)
-
-    def var_of(self):
-        tot = 0
-        x_bar = sum(self.sb_name) / len(self.sb_name)
-        x = self.sb_name
-        for i in range(len(x)):
-            val = x[i] - x_bar
-            val = val ** 2
-            tot = tot + val
-        return tot / (len(x) - 1)
+        self.sb_name = np.array(sb_name)
+        self.sum_of = np.sum(self.sb_name)
+        self.mean_of = self.sum_of / len(sb_name)
+        # The variance was found by using a more closed form of the summation formula for sample variance
+        # 1/(n-1) * (sum((xi - x_bar)^2) where the only sums need to compute are now xi and xi^2
+        self.var_of = (1 / (len(self.sb_name) - 1)) * (np.sum(np.square(self.sb_name)) - 2 * self.mean_of *
+                                                       self.sum_of + len(self.sb_name) * self.mean_of ** 2)

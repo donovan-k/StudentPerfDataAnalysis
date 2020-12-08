@@ -20,9 +20,9 @@ def sd_of(var):
     return math.sqrt(var)
 
 
-mean_ar = np.array([math_stats.mean_of(), read_stats.mean_of(), writ_stats.mean_of()])
-var_ar = np.array([math_stats.var_of(), read_stats.var_of(), writ_stats.var_of()])
-sd_ar = np.array([sd_of(math_stats.var_of()), sd_of(read_stats.var_of()), sd_of(writ_stats.var_of())])
+mean_ar = np.array([math_stats.mean_of, read_stats.mean_of, writ_stats.mean_of])
+var_ar = np.array([math_stats.var_of, read_stats.var_of, writ_stats.var_of])
+sd_ar = np.array([sd_of(math_stats.var_of), sd_of(read_stats.var_of), sd_of(writ_stats.var_of)])
 
 data = {'mean': mean_ar, 'variance': var_ar, 'standard deviation': sd_ar}
 new_df = pd.DataFrame(data=data, index=['math', 'reading', 'writing'])
@@ -50,4 +50,5 @@ plt.xticks([r + barWidth for r in range(len(bars1))], ['math', 'reading', 'writi
 
 # Create legend & Show graphic
 plt.legend()
-plt.savefig('compare_subjects.png')
+# plt.savefig('compare_subjects.png')
+plt.show()
