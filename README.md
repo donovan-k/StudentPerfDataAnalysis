@@ -2,9 +2,9 @@
 # Data comes from https://www.kaggle.com/spscientist/students-performance-in-exams
 
 # Main files are:
-compare_by_greater.py, compare_by_mean.py, and statistical_measurements.py
+compare_by_greater.py, compare_by_mean.py, statistical_measurements.py, and FindStatsUser
 
-# So far I have compared male and female scores along with overall scores for math, reading, and writing.
+# So far the first two compare math and female scores, the third compares statistic values for math, reading and writing scores, and the fourth one asks the user for classification and shows average scores for math through writing and shows for each idenity they choose
 
 # P.S (I used PyCharm for this project)
 
@@ -22,3 +22,10 @@ COMPARING THE COUNT OF SCORES GREATER THAN 80
 COMPARING SUBJECT CALCULATIONS
 
 ![compare_subjects](https://user-images.githubusercontent.com/48697778/100936846-bc6f4380-34b7-11eb-96bc-3e6558821d75.png)
+
+#FindStatUser Example:
+user choose male, group B, high school, standard, and completed for each of the categories
+
+COMPARING USER-CHOSEN SUB-GROUPS
+
+![user_input](https://user-images.githubusercontent.com/48697778/101975620-85a9d380-3c03-11eb-8826-88e42486f51c.png)
