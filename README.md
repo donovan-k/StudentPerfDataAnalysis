@@ -1,4 +1,4 @@
-# This is a python program that is used to analize a student performance dataset on groups based on gender, race, level of education, and so on.
+# This is a python program that is used to analize a student performance dataset on groups based on gender, race, level of parents education, what kind of lunch, and whether they have taken the test preparation course.
 # Data comes from https://www.kaggle.com/spscientist/students-performance-in-exams
 
 # Main files are:
