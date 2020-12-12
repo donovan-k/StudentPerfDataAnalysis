@@ -23,9 +23,9 @@ fem_read_stats = sC.StatCalc(fem_data.read_sb)
 male_writ_stats = sC.StatCalc(male_data.writ_sb)
 fem_writ_stats = sC.StatCalc(fem_data.writ_sb)
 
-bars1 = [male_math_stats.mean_of(), fem_math_stats.mean_of()]   # Average math score
-bars2 = [male_read_stats.mean_of(), fem_read_stats.mean_of()]  # Average reading score
-bars3 = [male_writ_stats.mean_of(), fem_writ_stats.mean_of()]  # Average writing score
+bars1 = [male_math_stats.mean_of, fem_math_stats.mean_of]   # Average math score
+bars2 = [male_read_stats.mean_of, fem_read_stats.mean_of]  # Average reading score
+bars3 = [male_writ_stats.mean_of, fem_writ_stats.mean_of]  # Average writing score
 
 # set width of bar
 barWidth = 0.25
